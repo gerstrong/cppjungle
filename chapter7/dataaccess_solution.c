@@ -6,24 +6,21 @@ int main()
     int numPeople = 0;
     FILE *fp = NULL;
 
-    // same as printf
-    fprintf(stdout, "How many people to greet?\n");
+    // Gleichwertig zu printf
+    fprintf(stdout, "Wievielen Leuten möchten Sie grüßen?\n");
 
-    // Read x as integer from the buf
+    // Lese x als integer aus der Tastatureingabe
     scanf("%d", &numPeople);
-
-    fp = fopen("test.txt", "w"); // Zu 2
-    fclose(fp);
 
     for(int c=0 ; c<numPeople ; c++)
     {
-        fprintf(stdout, "Who to greet?\n");
+        fprintf(stdout, "Wen möchten Sie grüßen?\n");
 
-        // Read the name and stores it in buf
+        // Lese den name ein und speichere diesen in buf
         scanf("%s", &buf);
-        fprintf(stderr, "Hello %s!\n", buf);
+        fprintf(stderr, "Hallo %s!\n", buf);
 
-        fp = fopen("test.txt", "a"); // Zu 1
+        fp = fopen("test.txt", "w");
 
         if(fp == NULL)
             return -1;
@@ -36,7 +33,7 @@ int main()
 
     if(!fp)
     {
-        fprintf(stdout, "Error opening file!\n");
+        fprintf(stdout, "Fehler beim öffnen der Datei!\n");
         return 1;
     }
 
