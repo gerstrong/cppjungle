@@ -12,6 +12,9 @@ int main()
     // Lese x als integer aus der Tastatureingabe
     scanf("%d", &numPeople);
 
+    fp = fopen("test.txt", "w");
+    fclose(fp);
+
     for(int c=0 ; c<numPeople ; c++)
     {
         fprintf(stdout, "Wen möchten Sie grüßen?\n");
@@ -20,7 +23,8 @@ int main()
         scanf("%s", &buf);
         fprintf(stderr, "Hallo %s!\n", buf);
 
-        fp = fopen("test.txt", "w");
+        // Zu 1.
+        fp = fopen("test.txt", "a");
 
         if(fp == NULL)
             return -1;
