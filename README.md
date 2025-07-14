@@ -1,4 +1,5 @@
 # cppjungle
+
 Some Examples for learning C and C++
 
 These are challenges and solutions as provided by the C and C++ book you can purchase using the following link (German Language): https://www.amazon.de/dp/B0DDHLR1SN
@@ -6,3 +7,10 @@ These are challenges and solutions as provided by the C and C++ book you can pur
 There is more to come, but the book explains a lot of stuff already.
 
 I need to think about more stuff
+
+
+
+
+
+This is a new line added today.
+
